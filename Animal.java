@@ -33,7 +33,6 @@ public abstract class Animal {
 	}
 	
 	
-	
 	public int getId() {
 		return id;
 	}
