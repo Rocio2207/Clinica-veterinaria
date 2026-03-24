@@ -31,5 +31,12 @@ public class Consulta {
 		return false;
 		
 	}
+
+	@Override
+	public String toString() {
+		return "Consulta [fecha=" + fecha + ", idAnimal=" + idAnimal + ", diagnostico=" + diagnostico
+				+ ", recetaMedicamento=" + recetaMedicamento + "]";
+	}
+	
 	
 }
