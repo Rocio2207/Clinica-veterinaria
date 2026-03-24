@@ -1,11 +1,11 @@
 package ud6.veterinaria.v3;
 
-public class Serpiente extends NoDomesticos implements contactaPropietario {
-private	Especie especie;
+public class Serpiente extends NoDomesticos {
+	private	EspecieSerpiente especie;
 	private Boolean venenosa;
 	
-	public Serpiente(int id, Sexo sexo, double peso, Especie especie, Boolean venenosa) {
-		super(id, sexo, peso);
+	public Serpiente(EspecieSerpiente especie, Boolean venenosa, Sexo sexo, double peso, Propietario propietario) {
+		super(sexo, peso, propietario);
 		this.especie = especie;
 		this.venenosa = venenosa;
 	}
