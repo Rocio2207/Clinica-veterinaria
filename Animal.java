@@ -12,26 +12,15 @@ public abstract class Animal implements contactaPropietario{
 	static List <Animal> listaAnimales = new ArrayList<Animal>();
 	
 	
-	public Animal(int id, Sexo sexo, double peso, Propietario propietario) {
+	public Animal(Sexo sexo, double peso, Propietario propietario) {
 		super();
-		this.id = id;
+		this.id = contadorAnimales;
 		this.sexo = sexo;
 		this.peso = peso;
 		this.propietario = propietario;
 		listaAnimales.add(this);
 		contadorAnimales++;
 	}
-
-	public Animal(int id, Sexo sexo, double peso) {
-		super();
-		this.id = id;
-		this.sexo = sexo;
-		this.peso = peso;
-		this.propietario = null;
-		listaAnimales.add(this);
-		contadorAnimales++;
-	}
-	public abstract Integer cortarUnas();
 	
 	public static int getContadorAnimales() {
 		return contadorAnimales;
