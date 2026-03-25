@@ -11,10 +11,11 @@ import java.util.LinkedHashSet;
 public class Clinica {
 	
 	Map<Integer, List<Consulta>> consultas;
-	private List<Animal> animales = new ArrayList<>();
+	private List<Animal> animales;
 	
 	Clinica(){
 		this.consultas = new HashMap<Integer, List<Consulta>>();
+		this.animales = new ArrayList<Animal>();
 	}
 	
 	public int cuantosAnimales() {
