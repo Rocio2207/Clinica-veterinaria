@@ -20,9 +20,19 @@ public class Clinica {
 	}
 	
 	
-	Set<Consulta> getConsultas(int idAnimal){
-		Set<Consulta> consultasId = new LinkedHashSet<Consulta>();
-		return consultasId;
+	Set<Consulta> getConsultas(int idAnimal) {
+		if(mapClinica.containsKey(idAnimal)) {
+			Set<Consulta> consultasId = new LinkedHashSet<Consulta>(mapClinica.get(idAnimal));
+			return consultasId;
+		}
+		
+		
 	}
 	
+}
+
+class AnimalNoEncontradoException extends Exception{
+	public AnimalNoEncontradoException(String mensaje) {
+		super(mensaje);
+	}
 }
