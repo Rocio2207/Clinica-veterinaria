@@ -1,6 +1,7 @@
 package ud6.veterinaria.v3;
 
 import java.util.Map;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.LinkedList;
@@ -10,6 +11,7 @@ import java.util.LinkedHashSet;
 public class Clinica {
 	
 	Map<Integer, List<Consulta>> consultas;
+	private List<Animal> animales = new ArrayList<>();
 	
 	Clinica(){
 		this.consultas = new HashMap<Integer, List<Consulta>>();
@@ -18,6 +20,10 @@ public class Clinica {
 	public int cuantosAnimales() {
 		return Animal.getContadorAnimales();
 	}
+	
+	public void addAnimal(Animal a) {
+            this.animales.add(a);
+    }
 	
 	
 	Set<Consulta> getConsultas(int idAnimal) throws AnimalNoEncontradoException{
