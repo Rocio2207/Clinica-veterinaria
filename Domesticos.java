@@ -5,15 +5,17 @@ protected String nombreAnimal;
 protected int edad;
 protected String raza;
 protected String numChip;
-public Domesticos(int id, Sexo sexo, double peso, Propietario propietario, String nombreAnimal, int edad, String raza,
+public Domesticos(Sexo sexo, double peso, Propietario propietario, String nombreAnimal, int edad, String raza,
 		String numChip) {
-	super(id, sexo, peso, propietario);
+	super(sexo, peso, propietario);
 	this.nombreAnimal = nombreAnimal;
 	this.edad = edad;
 	this.raza = raza;
 	this.numChip = numChip;
 }
+
 public abstract void cortarUnas();
+
 @Override
 public String toString() {
 	return "Domesticos [nombreAnimal=" + nombreAnimal + ", edad=" + edad + ", raza=" + raza + ", numChip=" + numChip
