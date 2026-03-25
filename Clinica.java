@@ -9,10 +9,10 @@ import java.util.LinkedHashSet;
 
 public class Clinica {
 	
-	Map<Integer, List<Consulta>> mapClinica;
+	Map<Integer, List<Consulta>> consultas;
 	
 	Clinica(){
-		this.mapClinica = new HashMap<Integer, List<Consulta>>();
+		this.consultas = new HashMap<Integer, List<Consulta>>();
 	}
 	
 	public int cuantosAnimales() {
@@ -20,10 +20,13 @@ public class Clinica {
 	}
 	
 	
-	Set<Consulta> getConsultas(int idAnimal) {
-		if(mapClinica.containsKey(idAnimal)) {
-			Set<Consulta> consultasId = new LinkedHashSet<Consulta>(mapClinica.get(idAnimal));
+	Set<Consulta> getConsultas(int idAnimal) throws AnimalNoEncontradoException{
+		if(consultas.containsKey(idAnimal)) {
+			Set<Consulta> consultasId = new LinkedHashSet<Consulta>(consultas.get(idAnimal));
 			return consultasId;
+		}
+		else {
+			throw new AnimalNoEncontradoException("El id proporcionado, no coincide con ningun animal.");
 		}
 		
 		
